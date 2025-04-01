@@ -123,7 +123,7 @@ def main():
         "device": "mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu",
         "data_dir": "./data",
         "ood_dir": "./data/ood-test",
-        "wandb_project": "sp25-ds542-challenge",
+        "wandb_project": "sp25-ds542-challenge-part3",
         "seed": 42,
         "weight_decay": 5e-4,  # Add weight decay for regularization
     }

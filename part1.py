@@ -136,7 +136,7 @@ def main():
         "ood_dir": "./data/ood-test",
         "model_save_path": "./simple_cnn_best.pth",
         "submission_file": "./submission_part1.csv",
-        "wandb_project": "dl4ds_midterm_part1",
+        "wandb_project": "sp25-ds542-challenge-part3",
         "wandb_entity": "dlaboy-boston-university", 
         "num_workers": 4,
         "device": "cuda" if torch.cuda.is_available() else "cpu",

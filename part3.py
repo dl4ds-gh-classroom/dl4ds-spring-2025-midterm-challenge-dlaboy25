@@ -137,7 +137,7 @@ def main():
     ############################################################################
     CONFIG = {
         "model": "ResNet18_Pretrained_FineTuned",
-        "batch_size": 32,           # Reduced from 64 (matching friend's final)
+        "batch_size": 32,           # Reduced from 64
         "feature_extract_epochs": 5, # Epochs to train only the classifier
         "fine_tune_epochs": 20,     # Reduced from 35 (for 25 total epochs)
         "lr_feature_extract": 0.01, # Learning rate for the feature extraction phase
@@ -303,7 +303,6 @@ def main():
                                momentum=0.9, # Added momentum
                                weight_decay=CONFIG["weight_decay"])
     # Use a more sophisticated scheduler like CosineAnnealingLR for fine-tuning
-    # Switched to StepLR like the friend's report
     scheduler_tune = StepLR(optimizer_tune, step_size=7, gamma=0.1)
 
     for epoch in range(CONFIG["fine_tune_epochs"]):
